@@ -63,6 +63,7 @@ btn.addEventListener("click",function(){
     else if(this.innerText == "Done"){
          if (textarea.value.length == 0) {
             alert("Please enter the value");
+            window.location.reload();
         }
         else {
             textarea.disabled = true;
