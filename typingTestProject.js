@@ -41,10 +41,10 @@ const accuracy = (a,b)=>{
     
         a.split(" ").forEach((value,index)=>{
             if(value === b.split(" ")[index]){
-                return ++correct;
+                return correct++;
             }
             else{
-                return ++incorrect;
+                return incorrect++;
             }
         })
 }
