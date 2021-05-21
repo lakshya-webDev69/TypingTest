@@ -27,20 +27,20 @@ function endgame(){
     let totaltime = (endtime - starttime)/1000;
     let totalstr = textarea.value;
     let wordcount = countstr(totalstr);
-
+    let splittotalstr = totalstr.split(" ");
     let speed = Math.floor((wordcount/totaltime)*60);
 
-    accuracy(randompara.innerText,totalstr);
+    accuracy(randompara.innerText,splittotalstr);
 
     let finalmsg = `You typed total ${wordcount} words at
-                    the speed of ${speed} words per min with ${correct} correct words and ${incorrect} incorrect words`;
+                    the speed of ${speed} words per min with ${correct} correct words out of ${splittotalstr.length} words with ${incorrect} error`;
     result.textContent = finalmsg;
                 }
 
 const accuracy = (a,b)=>{
     
         a.split(" ").forEach((value,index)=>{
-            if(value === b.split(" ")[index]){
+            if(value === b[index]){
                 return correct++;
             }
             else{
