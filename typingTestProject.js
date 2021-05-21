@@ -65,8 +65,13 @@ btn.addEventListener("click",function(){
         playgame();
     }
     else if(this.innerText == "Done"){
-        textarea.disabled = true;
-        this.innerText = "Start";
-        endgame();
+         if (textarea.value.length == 0) {
+            alert("Please enter the value");
+        }
+        else {
+            textarea.disabled = true;
+            this.innerText = "Start";
+            endgame();
+        }
     }
 })
