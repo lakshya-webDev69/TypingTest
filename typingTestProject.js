@@ -56,11 +56,7 @@ function countstr(str){
 }
 
 btn.addEventListener("click",function(){
-    if(textarea.value.length == 0)
-    {
-        alert("Please enter the value");
-    }
-    else if(this.innerText == "Start"){
+     if(this.innerText == "Start"){
         textarea.disabled = false;
         playgame();
     }
